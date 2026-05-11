@@ -1,0 +1,28 @@
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+}
+
+android {
+    namespace 'com.kozen.financial'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 34
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'com.github.KOZENTech-Repo.KozenSDK'
+                artifactId = 'FinancialLib'
+                version = '1.5.0'
+
+                artifact("$projectDir/libs/FinancialLib_1.5.0_release.aar")
+            }
+        }
+    }
+}
