@@ -16,7 +16,7 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                groupId = 'com.github.KOZENTech-Repo.KozenSDK'
+                groupId = 'com.github.KOZENTech-Repo'
                 artifactId = 'ComponentLib'
                 version = '1.3.1'
 
